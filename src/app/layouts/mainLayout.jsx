@@ -1,0 +1,10 @@
+/* eslint-disable */
+import React from 'react';
+
+// sfc
+
+const MainLayout = () => {
+  return ( <h1>MainLayout</h1> );
+}
+ 
+export default MainLayout;
