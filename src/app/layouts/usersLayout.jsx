@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { divide } from "lodash";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import api from "../api";
@@ -16,7 +17,7 @@ const UsersLayout = ({ match }) => {
 
     return (
         <>
-            {findedUser && (
+            {findedUser ? (
                 <>
                     <h1>{findedUser.name}</h1>
                     <h3>Профессия: {findedUser.profession.name}</h3>
@@ -29,7 +30,7 @@ const UsersLayout = ({ match }) => {
                         Все пользователи
                     </button>
                 </>
-            )}
+            ) : (<div>Loading.........</div>)}
         </>
     );
 };
